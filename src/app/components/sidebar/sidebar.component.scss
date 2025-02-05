@@ -1,0 +1,46 @@
+@use '../../../styles/variables' as *;
+
+nav {
+    .fa-bars-staggered {
+        background-color: transparent;
+        border-width: 0px;
+        padding: 15px;
+        font-size: 2rem;
+        color: $menu-color;
+    }
+
+    .offcanvas-lg {
+        width: 235px;
+        background-color: $secondary-bg-color !important;
+        height: 100vh;
+        position: fixed !important;
+
+        img {
+            width: 100%;
+        }
+
+        .btn {
+            border: 1px solid $main-font-color;
+            padding: 5px 25px;
+            font-size: 1.2rem;
+            color: $main-font-color;
+            border-radius: 3px;
+            transition: 0.1s all ease-in;
+
+            &.active {
+                background-color: $nav-active-btn-bg;
+                box-shadow: 0 0 8px $nav-active-btn-bg;
+                border-color: $nav-active-btn-bg;
+            }
+
+            &:hover {
+                transform: scale(1.03);
+            }
+
+            @media screen and (max-width:991px) {
+                font-size: 1rem;
+
+            }
+        }
+    }
+}
