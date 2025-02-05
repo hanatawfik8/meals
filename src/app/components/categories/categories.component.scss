@@ -1,0 +1,46 @@
+@use '../../../styles/variables' as *;
+
+nav {
+    background-color: $main-bg-color;
+
+    .nav-link {
+        color: $main-font-color;
+        border: 1px solid $main-font-color;
+        padding: 5px 15px !important;
+        border-radius: 15px;
+        transition: 0.1s all ease-in;
+
+        &:hover {
+            transform: scale(1.03);
+        }
+
+        &.activeLink {
+            background-color: $main-font-color;
+            color: $main-bg-color;
+        }
+    }
+
+    .navbar-toggler {
+        border-width: 0px;
+        margin-bottom: 10px;
+        box-shadow: 0 0 0;
+        color: $main-font-color;
+        transition: 0.1s all ease-in;
+
+        &:hover {
+            transform: scale(1.01);
+        }
+    }
+
+    @media screen and (max-width:991px) {
+        width: 100%;
+        position: sticky;
+        top: 0;
+
+
+        .nav-link {
+            border: 1px solid $main-font-color;
+            border-radius: 0;
+        }
+    }
+}
