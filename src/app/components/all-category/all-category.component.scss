@@ -1,0 +1,41 @@
+@use '../../../styles/variables' as *;
+
+.card {
+    border: 1px $main-font-color !important;
+    transition: 0.2s all ease-in;
+    box-shadow: 0 0 2px gray;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.02);
+
+        a {
+            opacity: 0.8;
+        }
+    }
+}
+
+img {
+    transform: translateY(-30px);
+    border-radius: 50%;
+}
+
+span {
+    font-weight: 500;
+    font-size: 1.3rem;
+    transform: translateY(-20px);
+}
+
+.country {
+    font-size: 1rem;
+    color: $view-recipe-btn-bg;
+    transform: translateY(-15px);
+}
+
+a {
+    background-color: $view-recipe-btn-bg;
+    color: $main-bg-color !important;
+    padding: 5px 15px;
+    border-radius: 8px;
+    transition: 0.2s all ease-in;
+}

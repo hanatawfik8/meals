@@ -5,3 +5,13 @@ body {
     font-family: $main-font-family;
     background-color: $main-bg-color;
 }
+
+main {
+    padding-left: 10px;
+    padding-top: 60px;
+
+    @media screen and (min-width:992px) {
+        padding-left: 265px;
+
+    }
+}

@@ -1,0 +1,11 @@
+@use '../../../styles/variables' as *;
+
+h1 {
+    font-family: $secondary-font-family;
+    font-weight: 900;
+    width: fit-content;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(to right, $nav-active-btn-bg , #D9524B);
+}
