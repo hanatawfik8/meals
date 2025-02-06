@@ -9,10 +9,6 @@
     &:hover {
         cursor: pointer;
         transform: scale(1.02);
-
-        a {
-            opacity: 0.8;
-        }
     }
 }
 
@@ -33,4 +29,8 @@ a {
     padding: 5px 15px;
     border-radius: 8px;
     transition: 0.2s all ease-in;
+
+    &:hover {
+        opacity: 0.8;
+    }
 }

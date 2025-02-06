@@ -6,7 +6,7 @@
                 <img [src]="food.strMealThumb" [alt]="food.strMeal" class="w-50">
                 <span>{{food.strMeal}}</span>
                 <span class="country"><i class="fa-solid fa-earth-americas"></i> {{food.strArea}}</span>
-                <a>View Recipe</a>
+                <a (click)="sendID(food.idMeal)" class="text-decoration-none" routerLink="/Recipe">View Recipe</a>
             </div>
         </div>
         }
