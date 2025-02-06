@@ -5,7 +5,7 @@
             <div class="card d-flex align-items-center pb-3 ">
                 <img [src]="food.strMealThumb" [alt]="food.strMeal" class="w-50">
                 <span class="text-center">{{food.strMeal.split(" ").splice(0,2).join(" ")}} ...</span>
-                <a>View Recipe</a>
+                <a class="text-decoration-none" (click)="sendID(food.idMeal)" routerLink="/Recipe">View Recipe</a>
             </div>
         </div>
         }
