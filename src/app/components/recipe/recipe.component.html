@@ -1,0 +1,27 @@
+<section class="ms-3">
+    <div class="row m-0 gy-3 border-bottom pb-3">
+        <div class="col-md-4 imgContainer">
+            <h2>{{recipe.strMeal}}</h2>
+            <img [src]="recipe.strMealThumb" [alt]="recipe.strMeal" class="w-100 ">
+            <div class="links d-flex justify-content-center gap-2 pt-2">
+                <a [href]="recipe.strYoutube" class="btn btn-danger" target="_blank"><i
+                        class="fa-brands fa-youtube"></i> Youtube</a>
+                <a [href]="recipe.strSource" class="btn btn-success" target="_blank"><i class="fa-solid fa-globe"></i>
+                    Source</a>
+            </div>
+
+        </div>
+        <div class="col-md-8 d-flex justify-content-center flex-column">
+            <ul class="bg-body-tertiary shadow-lg">
+                <li class="list-unstyled h4 ing">Ingredients</li>
+                @for (num of [].constructor(ingredients.length); track $index) {
+                <li class="d-flex justify-content-between px-5 border-bottom py-1">
+                    <span>{{ingredients[$index]}} :</span>
+                    <span>{{amounts[$index]}}</span>
+                </li>
+                }
+            </ul>
+        </div>
+    </div>
+    <p class="pt-3">{{recipe.strInstructions}}</p>
+</section>

@@ -1,15 +1,20 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { AllCategoryService } from '../../services/allCategory/all-category.service';
 import { DisplayAll } from '../../interfaces/display-all';
+import { GetRecipeService } from '../../services/getRecipe/get-recipe.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-all-category',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './all-category.component.html',
   styleUrl: './all-category.component.scss'
 })
 export class AllCategoryComponent implements OnInit, OnDestroy {
-  constructor(private _allCategoryService: AllCategoryService) { }
+  constructor(
+    private _allCategoryService: AllCategoryService,
+    private _getRecipeService: GetRecipeService
+  ) { }
   callingAPI: any;
   displayAll!: DisplayAll[];
 
@@ -31,6 +36,10 @@ export class AllCategoryComponent implements OnInit, OnDestroy {
 
       }
     })
+  }
+
+  sendID(id: string) {
+    this._getRecipeService.sentID = id;
   }
 
 
