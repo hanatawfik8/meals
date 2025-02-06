@@ -24,9 +24,7 @@ export class AllCategoryComponent implements OnInit, OnDestroy {
   getAllCategory() {
     this.callingAPI = this._allCategoryService.getAllCategory().subscribe({
       next: (res) => {
-
         this.displayAll = res.meals
-        console.log(this.displayAll);
       },
       error: (err) => {
         console.log(err);
