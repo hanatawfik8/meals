@@ -1,9 +1,10 @@
 import { Routes } from '@angular/router';
 import { DisplayCategoryComponent } from './components/display-category/display-category.component';
+import { AllCategoryComponent } from './components/all-category/all-category.component';
 
 export const routes: Routes = [
-    { path: "", redirectTo: "Beef", pathMatch: "full" },
-    // { path: "", redirectTo: "All", pathMatch: "full" },
+    { path: "", redirectTo: "All", pathMatch: "full" },
+    { path: "All", component: AllCategoryComponent },
     { path: "Beef", component: DisplayCategoryComponent },
     { path: "Breakfast", component: DisplayCategoryComponent },
     { path: "Chicken", component: DisplayCategoryComponent },

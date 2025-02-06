@@ -8,7 +8,7 @@ import { ICategoryFood } from '../../interfaces/icategory-food';
   templateUrl: './display-category.component.html',
   styleUrl: './display-category.component.scss'
 })
-export class DisplayCategoryComponent implements OnInit {
+export class DisplayCategoryComponent implements OnInit, OnDestroy {
   displayedFood!: ICategoryFood[]
   callSpecificAPI: any
 
@@ -23,6 +23,10 @@ export class DisplayCategoryComponent implements OnInit {
         console.log(err);
       }
     })
+  }
+
+  ngOnDestroy(): void {
+    this.callSpecificAPI.unsubscribe()
   }
 
 }

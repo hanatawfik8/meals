@@ -3,7 +3,6 @@ import { CategoriesService } from '../../services/categories/categories.service'
 import { ICategories } from '../../interfaces/icategories';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { DisplayCategoryService } from '../../services/displayCategory/display-category.service';
-import { ICategoryFood } from '../../interfaces/icategory-food';
 
 @Component({
   selector: 'app-categories',
