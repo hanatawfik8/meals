@@ -25,12 +25,12 @@ export class RecipeComponent implements OnInit, OnDestroy {
         this.ingredients = []
         this.amounts = []
         for (let i = 9; i <= 28; i++) {
-          if (this.values[i] != "") {
+          if (this.values[i]) {
             this.ingredients.push(this.values[i])
           }
         }
         for (let i = 29; i <= 48; i++) {
-          if (this.values[i] != " ") {
+          if (this.values[i] != " " && this.values[i]) {
             this.amounts.push(this.values[i])
           }
         }

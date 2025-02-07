@@ -15,7 +15,7 @@
             <ul class="bg-body-tertiary shadow-lg">
                 <li class="list-unstyled h4 ing">Ingredients</li>
                 @for (num of [].constructor(ingredients.length); track $index) {
-                <li class="d-flex justify-content-between px-5 border-bottom py-1">
+                <li class="d-flex justify-content-between px-md-5 px-sm-2 px-1 border-bottom py-1">
                     <span>{{ingredients[$index]}} :</span>
                     <span>{{amounts[$index]}}</span>
                 </li>
