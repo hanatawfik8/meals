@@ -20,6 +20,4 @@ export const routes: Routes = [
     { path: "Vegan", component: DisplayCategoryComponent },
     { path: "Vegetarian", component: DisplayCategoryComponent },
     { path: "Recipe", component: RecipeComponent }
-
-
 ];

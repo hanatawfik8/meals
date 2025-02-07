@@ -1,0 +1,30 @@
+@use '../../../styles/variables' as *;
+
+footer {
+    position: relative;
+    z-index: 3;
+    background-color: $secondary-bg-color;
+
+    img {
+        width: 40px;
+    }
+
+    span {
+        font-size: 1.4rem;
+        font-weight: 900;
+        font-family: $secondary-font-family;
+
+        &.route {
+            color: $view-recipe-btn-bg;
+        }
+    }
+
+    a {
+        color: $view-recipe-btn-bg;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
